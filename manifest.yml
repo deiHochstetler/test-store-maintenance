@@ -1,0 +1,5 @@
+---
+applications:
+- name: test-store-maintenance
+  command: yarn run setup-prod && yarn start
+  buildpack: nodejs_buildpack

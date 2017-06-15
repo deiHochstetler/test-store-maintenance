@@ -1,0 +1,22 @@
+module.exports = {
+  etl_src: {
+    client: 'postgresql',
+    connection: {
+      database: 'etl_src',
+      host: 'localhost'
+    },
+    migrations: {
+      tableName: 'knex_migrations'
+    }
+  },
+  etl_dst: {
+    client: 'postgresql',
+    connection: {
+      database: 'etl_dst',
+      host: 'localhost'
+    },
+    migrations: {
+      tableName: 'knex_migrations'
+    }
+  }
+};

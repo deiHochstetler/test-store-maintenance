@@ -1,0 +1,33 @@
+{
+  "name": "test-store-maintenance",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "setup-prod": "./setup.sh production",
+    "start": "NODE_ENV=production node ./bin/www",
+    "setup-dev": "./setup.sh development",
+    "dev": "NODE_ENV=development DEBUG=test-store-maintenance:* nodemon ./bin/www",
+    "test-pretty": "NODE_ENV=test ./node_modules/.bin/jasmine-node spec --verbose --color",
+    "test": "NODE_ENV=test jasmine",
+    "auto-test": "NODE_ENV=test ./node_modules/.bin/jasmine-node spec --autotest --color --watch routes"
+  },
+  "dependencies": {
+    "body-parser": "~1.17.1",
+    "bookshelf": "^0.10.3",
+    "cfenv": "^1.0.4",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.3",
+    "express": "~4.15.2",
+    "knex": "^0.13.0",
+    "morgan": "~1.8.1",
+    "mysql": "^2.13.0",
+    "pg": "^6.1.5",
+    "serve-favicon": "~2.4.2"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5",
+    "nodemon": "^1.11.0",
+    "request": "^2.81.0",
+    "request-promise-native": "^1.0.3"
+  }
+}
